@@ -1,0 +1,380 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<title>Home</title>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="{% static 'mark.jpg' %}">
+<meta charset="UTF-8">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Profile</h1>
+			<nav>
+				<ul>
+					<li><a href="{% url 'home' %}" class="current">Home<i class="fa fa-home"></i></a></li>
+					<li><a href="{% url 'gallery' %}">Gallery</a></li>
+					<li><a href="mailto:ebisumark23@gmail.com">Contact</a></li>
+					<li><a href="{% url 'login' %}">Log In</a></li>
+					     {% if user.is_authenticated %}
+					       Hi {{ user.username }}
+					<li><a href="{% url 'logout' %}">Log Out</a></li>
+					     {% else %}
+					<li><a href="{% url 'signup' %}">Sign Up</a></li>
+					       Please log in
+					     {% endif %}
+				</ul>
+			</nav>
+		</header>
+	    <section class="Blog">
+	    	  <article>
+	        	<figure>
+	        		<img src="{% static 'code.jpg' %}">
+	        		<figcaption>Code</figcaption>
+	        	</figure>
+	        	<hgroup>
+	        		   <h2>Django</h2>
+	    			   <h3>Python</h3>
+	        	</hgroup>
+	        	    <p>Web Project</p>
+	        </article>	
+	        <hr> 
+	    	<article>
+	    		<figure>
+	    			<img src="{% static 'goji.jpg' %}" alt="Face">
+	    			<figcaption>Goji</figcaption>
+	    		</figure>
+	    		<hgroup>
+	    			<h2>Color</h2>
+	    			<h3>Red</h3>
+	    		</hgroup>
+	    		    <p>Found in Brazil</p>
+	        </article>
+	        <hr>
+	        <article>
+	    		<figure>
+	    			<img src="{% static 'kinmedai.jpg' %}" alt="Face">
+	    			<figcaption>High Grade Fish</figcaption>
+	    		</figure>
+	    		<hgroup>
+	    			<h2>Red Sea Bream</h2>
+	    			<h3>Expensive</h3>
+	    		</hgroup>
+	    		    <p>Rare find fish</p>
+	        </article>
+	        <hr>
+	        <article>
+	        	<figure>
+	        		<img src="{% static 'almonds.jpg' %}" alt="Face">
+	        		<figcaption>Nuts</figcaption>
+	        	</figure>
+	        	<hgroup>
+	        		<h2>High in magnesium</h2>
+	        		<h3>Nutritious</h3>
+	        	</hgroup>
+	        	    <p>Almonds</p>
+	        </article>
+	        <hr>
+	        <article>
+	        	<figure>
+	        		<img src="{% static 'durain.jpg' %}" alt="Face">
+	        		<figcaption>Fruit</figcaption>
+	        	</figure>
+	        	<hgroup>
+	        		<h2>Color</h2>
+	        		<h3>Green</h3>
+	        	</hgroup>
+	        	    <p>Unique</p>
+	        </article>
+	        <hr>
+	          <article>
+	        	<figure>
+	        		<img src="{% static 'pear.jpg' %}" alt="Face">
+	        		<figcaption>Pear</figcaption>
+	        	</figure>
+	        	<hgroup>
+	        		<h2>Fruit</h2>
+	        		<h3>New</h3>
+	        	</hgroup>
+	        	    <p>Sweet taste</p>
+	        </article>
+	        <hr>
+	        <article>
+	        	<figure>
+	        		<img src="{% static 'acai.jpg' %}" alt="Face">
+	        		<figcaption>Acai is high in antioxidant</figcaption>
+	        	</figure>
+	        	<hgroup>
+	        		<h2>Color</h2>
+	        		<h3>Violet</h3>
+	        	</hgroup>
+	        	    <p>Contains more ORAC</p>
+	        </article>	
+	        <hr>  
+	        <article>
+	        	<figure>
+	        		<img src="{% static 'herbs.jpg' %}" alt="Face">
+	        		<figcaption>Plants</figcaption>
+	        	</figure>
+	        	<hgroup>
+	        		<h2>Herbs</h2>
+	        		<h3>Blooming</h3>
+	        	</hgroup>
+	        	    <p>Relaxation</p>
+	        </article>
+	        <hr>
+	         	  	  
+	       </section>
+	      <aside>
+	    	<section class="contact-details">
+	    		<h2 align="center" class="a">Connect</h2>
+	    		<a href="https://www.facebook.com/mark.ebisu" class="fa fa-facebook"></a> <a href="https://github.com/octo25" class="fa fa-github" style="font-size:24px;color:purple"></a><hr>
+	    		<a href="">January 2020</a>
+	    		<a href="">February 2020</a>
+	    		<a href="">March 2020</a>
+	    		<a href="">April 2020</a>
+	    		<a href="">May 2020</a>
+	    		<a href="">June 2020</a>
+	    		<a href="">July 2020</a>
+	    		<a href="">August 2020</a>
+	    		<a href="">September 2020</a>
+	    		<a href="">October 2020</a>
+	    		<a href="">November 2020</a>
+	    		<a href="">December 2020</a>
+	    	</section>
+	    	<section class="contact-details">
+	    		<h2>Contact</h2>
+	    		<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d399624.18714828!2d-122.63407120965219!3d38.50923569872481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80844ff9232a4f31%3A0xfe14d21ba310c57c!2sNapa%20County%2C%20CA!5e0!3m2!1sen!2sus!4v1570420578349!5m2!1sen!2sus" width="200" height="200" frameborder="0" style="border:0;" allowfullscreen=""></iframe><hr>
+	    			Music <hr>
+	    			Gundam <hr>
+	    			Money <hr>
+	    			Phone </p>
+	    	</section>
+	       	<section class="Message">
+	       	<h2>Profile</h2>
+	       	<p>Software Developer<hr>
+	       		Html <hr>
+	       		Css <hr>
+	       		Python <hr>
+	       	 </section>	
+	       	</aside>
+
+	       <aside>
+	       	 <section class="Image">
+	       	 	<img src="{% static 'mark.jpg' %}">
+	       	 	  <h2 class="b">Places had visited</h2>
+	       	 	  	<ul class="a">
+	       	 	  	<li>ASIA<hr>
+	       	 		<li>Japan<hr>
+	       	 		<li>Vietnam<hr>
+	       	 		<li>Phillipines<hr>
+	       	 		<li>China<hr>
+	       	 		<li>Cambodia</li>
+	       	 	</ul>
+	       	 </section>
+	       </aside>
+
+
+
+
+        <footer>
+        	&copy: 2020 future
+        </footer>
+    </div>
+</body>
+
+
+<style type="text/css">
+
+    header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+    body {
+		width: 960px;
+		margin: 0 auto;
+		background-color: gainsboro;
+		font-family: Georgia, Times, serif;
+		line-height: 1.4em;		
+
+	}
+
+    aside section a:hover {
+        background-color: white;
+    }
+
+    header {
+    	height: 160px;
+    	background-image: url('/static/lined.jpg');
+    	background-repeat: repeat-y;
+    	background-position: right;
+    
+    }
+
+    ul.h2 {
+    	color: crimson;
+    }
+
+    ul.a {
+    	list-style-type: circle;
+    }
+
+    h1 {
+    	text-indent: -9999px; 
+        width: 940px;
+        height: 130px;
+        margin: 0px;
+    	}
+
+    .wrapper {
+		width: 940px;
+		margin: 20px auto 20px auto;
+		border: 2px solid grey;
+		background-color: #efefef;
+	}
+
+	nav, footer {
+		clear: both;
+		background-color: ghostwhite;
+		height: 30px;
+	}
+
+	nav ul {
+		margin: 0px;
+		padding: 5px 0px 5px 30px;
+	}
+
+	nav li {
+		display: inline;
+		margin-right: 80px;
+	}
+
+	nav li a {
+		color: black;
+	}
+
+	nav li a: hover, nav li a.current {
+        color: #efefef;
+	}
+
+	section.Blog {
+		float: left;
+		width: 659px;
+		border-right: 1px solid #eeeeee;
+	}
+
+	article {
+		clear: both;
+		overflow: auto;
+		width: 100%;
+	}
+
+	hgroup {
+		margin-top: 40px;
+	}
+
+	hr {
+		border-top: 1px dotted grey;
+	}
+
+	figure {
+		float:left;
+		width: 290px;
+		height: 220px;
+		padding: 5px;
+		margin: 20px;
+		border: 1px solid #eeeeee;
+	}
+
+	figcaption {
+		font-size: 90%;
+		text-align: left;
+	}
+
+	aside {
+		width: 230px;
+		float: left;
+		padding: 0px 0px 0px 20px;
+	}
+
+	aside section a {
+		display: block;
+		padding: 10px;
+		border-bottom: 1px solid #eeeeee;
+	}
+
+	a {
+    	color: darkgoldenrod;
+    	text-decoration: none;
+    }
+
+	h1, h2, h3 {
+    	font-weight: normal;
+    }
+
+	h2 {
+       margin: 10px 0px 5px 0px;
+       padding: 0px;
+       color: crimson;
+    } 
+
+    h2.a {
+    	color: crimson;
+    }
+
+	h3 {
+    	margin: 0px 0px 10px 0px;
+    	color: black;
+    }
+
+	aside h2 {
+    	padding: 30px 0px 10px 0px;
+    	color: #de6581;
+    }
+
+    footer {
+    	font-size: 80%;
+    	padding: 7px 0px 0px 20px;
+    }
+
+    .fa-facebook {
+        background: black;
+        color: white;
+        border-radius: 10px;
+
+}
+
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+        border-radius: 10px;
+}   
+    
+    .fa-google {
+        background: #dd4b39;
+        color: white;
+        border-radius: 10px;
+} 
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+        border-radius: 10px;
+}   
+    .fa-youtube {
+        background: #bb0000;
+        color: white;
+        border-radius: 10px;
+}
+
+</style>
+
+</body>
+
+

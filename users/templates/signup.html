@@ -1,0 +1,96 @@
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="{% static 'mark.jpg' %}">
+<meta charset="UTF-8">
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="wrapper">
+		<header>
+			<h1>Profile</h1>
+			<nav>
+				<ul>
+					<li><a href="{% url 'home' %}" class="current">Home<i class="fa fa-home"></i></a></li>
+					<li><a href="{% url 'gallery' %}">Gallery</a></li>
+					<li><a href="mailto:ebisumark23@gmail.com">Contact</a></li>
+					<li><a href="{% url 'login' %}">Log In</a></li>
+					<li><a href="{% url 'signup' %}">Sign Up</a></li>	
+				</ul>
+			</nav>
+		</header>
+
+   <h2>Sign Up</h2>
+ <form method="post">
+  	{% csrf_token %}
+  	{{ form|crispy }}
+   <button class="btn btn-warning" type="submit">Sign Up</button>
+ </form>
+
+ <style type="text/css">
+
+    header, section, footer, aside, nav, main, article, figure {
+  display: block;
+}
+
+    nav ul {
+		margin: 0px;
+		padding: 5px 0px 5px 30px;
+	}
+
+	nav li {
+		display: inline;
+		margin-right: 80px;
+	}
+
+	nav li a {
+		color: black;
+	}
+	nav li a: hover, nav li a.current {
+        color: #000000;
+	}
+
+    body {
+		width: 960px;
+		margin: 0 auto;
+		background-color: gainsboro;
+		font-family: Georgia, Times, serif;
+		line-height: 1.4em;		
+	}
+
+	nav, footer {
+		clear: both;
+		background-color: ghostwhite;
+		height: 30px;
+	}
+
+    footer {
+    	font-size: 80%;
+    	padding: 7px 0px 0px 20px;
+    	color: black;
+    }
+
+    .fa-facebook {
+  background: slategrey;
+  color: white;
+}
+
+</style>
+
+        <footer>
+        	&copy: 2020 future
+        </footer>
+    </div>
+</body>
+
+
+
